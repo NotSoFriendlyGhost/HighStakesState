@@ -452,7 +452,6 @@ void redLeftAuton(){
   chassis.pid_wait();
   chassis.pid_odom_set(14_in,DRIVE_SPEED);
   chassis.pid_wait();
-  intake.brake();
   chassis.pid_turn_set(150_deg,TURN_SPEED);
   chassis.pid_wait();
 
