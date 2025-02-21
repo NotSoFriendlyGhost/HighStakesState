@@ -20,4 +20,4 @@ void leftRed();
 void rightBlue();
 void closeBase();
 void skills();
-void redLeftAuton();
+void redLeftAWP();

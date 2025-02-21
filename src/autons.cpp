@@ -393,7 +393,7 @@ void measure_offsets() {
 // Make your own autonomous functions here!
 // . . .
 
-void redLeftAuton(){
+void redLeftAWP(){
   // chassis.odom_xyt_set(-53.584, 23.345, 0);
   // chassis.pid_odom_set({{-53.584,0},rev,DRIVE_SPEED});
   // chassis.pid_wait();

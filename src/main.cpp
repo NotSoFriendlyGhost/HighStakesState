@@ -61,7 +61,7 @@ void initialize() {
 
   // Autonomous Selector using LLEMU
   ez::as::auton_selector.autons_add({
-    {"Red Left Autonomous For State", redLeftAuton},
+    {"Red Left AWP For State", redLeftAWP},
       {"Auton skills run", skills},
       {"Left Red", leftRed},
       {"Right Blue", rightBlue},
