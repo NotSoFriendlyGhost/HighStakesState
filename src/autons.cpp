@@ -436,24 +436,24 @@ void redLeftAWP(){
 
   chassis.pid_turn_set(70,TURN_SPEED);
   chassis.pid_wait();
-  chassis.pid_odom_set(15_in,DRIVE_SPEED);
+  chassis.pid_odom_set(12_in,DRIVE_SPEED);
   chassis.pid_wait();
   pros::delay(500);
-  chassis.pid_odom_set(-15_in,DRIVE_SPEED);
+  chassis.pid_odom_set(-13_in,DRIVE_SPEED);
   chassis.pid_wait();
-  chassis.pid_turn_set(90,TURN_SPEED);
+  chassis.pid_turn_set(135,TURN_SPEED);
   chassis.pid_wait();
-  chassis.pid_odom_set(16_in,DRIVE_SPEED);
+  chassis.pid_odom_set(23_in,DRIVE_SPEED);
   chassis.pid_wait();
-  pros::delay(500);
-  chassis.pid_odom_set(-2_in,DRIVE_SPEED);
-  chassis.pid_wait();
-  chassis.pid_turn_set(175_deg,TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set(14_in,DRIVE_SPEED);
-  chassis.pid_wait();
-  chassis.pid_turn_set(150_deg,TURN_SPEED);
-  chassis.pid_wait();
+  // pros::delay(500);
+  // chassis.pid_odom_set(-2_in,DRIVE_SPEED);
+  // chassis.pid_wait();
+  // chassis.pid_turn_set(175_deg,TURN_SPEED);
+  // chassis.pid_wait();
+  // chassis.pid_odom_set(14_in,DRIVE_SPEED);
+  // chassis.pid_wait();
+  // chassis.pid_turn_set(150_deg,TURN_SPEED);
+  // chassis.pid_wait();
 
 }
 
