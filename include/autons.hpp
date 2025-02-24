@@ -21,3 +21,4 @@ void rightBlue();
 void closeBase();
 void skills();
 void redLeftAWP();
+void redLeftRingRush();

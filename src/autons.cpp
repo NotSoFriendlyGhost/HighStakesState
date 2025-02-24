@@ -457,6 +457,10 @@ void redLeftAWP(){
 
 }
 
+void redLeftRingRush(){
+
+}
+
 void leftRed(){
   chassis.odom_xyt_set(-58.767,47.393,-90);
   chassis.pid_turn_set({-28.252,25.755}, rev, TURN_SPEED);

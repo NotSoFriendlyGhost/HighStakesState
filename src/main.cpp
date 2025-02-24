@@ -1,7 +1,9 @@
 #include "main.h"
+
 #include "autons.hpp"
 #include "pros/misc.h"
 #include "subsystems.hpp"
+
 
 /////
 // For installation, upgrading, documentations, and tutorials, check out our website!
@@ -24,7 +26,7 @@ ez::Drive chassis(
 // - `2.75` is the wheel diameter
 // - `4.0` is the distance from the center of the wheel to the center of the robot
 // ez::tracking_wheel horiz_tracker(8, 2.75, 4.0);  // This tracking wheel is perpendicular to the drive wheels
-ez::tracking_wheel vert_tracker(-4, 2, 1.75);   // This tracking wheel is parallel to the drive wheels
+ez::tracking_wheel vert_tracker(-4, 2, 1.75);  // This tracking wheel is parallel to the drive wheels
 
 /**
  * Runs initialization code. This occurs as soon as the program is started.
@@ -61,7 +63,8 @@ void initialize() {
 
   // Autonomous Selector using LLEMU
   ez::as::auton_selector.autons_add({
-    {"Red Left AWP For State", redLeftAWP},
+      {"Red Left AWP For State", redLeftAWP},
+      {"Color sort test for spitting red rings", redsort},
       {"Auton skills run", skills},
       {"Left Red", leftRed},
       {"Right Blue", rightBlue},
@@ -279,7 +282,7 @@ void opcontrol() {
       arm.move(0);
     }
 
-    if(master.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_UP)){
+    if (master.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_UP)) {
       mogoState = !mogoState;
       mogo.set_value(mogoState);
     }
