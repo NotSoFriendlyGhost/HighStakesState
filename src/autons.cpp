@@ -472,7 +472,7 @@ void redLeftRingRush(){
   mogo.set_value(1);
   pros::delay(250);
 
-  chassis.pid_turn_set({-7.938,40.536},fwd, TURN_SPEED);
+  chassis.pid_turn_set(45, TURN_SPEED);
   chassis.pid_wait();
   intake.move(127);
   chassis.pid_odom_set(25_in, DRIVE_SPEED);
