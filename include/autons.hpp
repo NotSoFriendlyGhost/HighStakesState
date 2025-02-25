@@ -27,3 +27,5 @@ void redLeftRingRush();
 void blueRightRingRush();
 void redRightSafe();
 void blueLeftSafe();
+void redRightTwoGoal();
+void blueLeftTwoGoal();
