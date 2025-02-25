@@ -67,6 +67,8 @@ void initialize() {
       {"Blue Right AWP For State", blueRightAWP},
       {"Red Left Ring Rush For State", redLeftRingRush},
       {"Blue Right Ring Rush For State", blueRightRingRush},
+      {"Safe Red Right Auton", redRightSafe},
+      {"Safe Blue Left Auton", blueLeftSafe},
       {"Color sort test for spitting red rings", redsort},
       {"Auton skills run", skills},
       {"Measure Offsets\n\nThis will turn the robot a bunch of times and calculate your offsets for your tracking wheels.", measure_offsets},

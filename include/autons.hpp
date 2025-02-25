@@ -25,3 +25,5 @@ void redLeftAWP();
 void blueRightAWP();
 void redLeftRingRush();
 void blueRightRingRush();
+void redRightSafe();
+void blueLeftSafe();
