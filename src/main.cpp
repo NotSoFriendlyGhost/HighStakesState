@@ -64,6 +64,9 @@ void initialize() {
   // Autonomous Selector using LLEMU
   ez::as::auton_selector.autons_add({
       {"Red Left AWP For State", redLeftAWP},
+      {"Blue Right AWP For State", blueRightAWP},
+      {"Red Left Ring Rush For State", redLeftRingRush},
+      {"Blue Right Ring Rush For State", blueRightRingRush},
       {"Color sort test for spitting red rings", redsort},
       {"Auton skills run", skills},
       {"Measure Offsets\n\nThis will turn the robot a bunch of times and calculate your offsets for your tracking wheels.", measure_offsets},

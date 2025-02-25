@@ -457,6 +457,12 @@ void redLeftAWP(){
 
 }
 
+void blueRightAWP(){
+  chassis.odom_x_flip();
+  chassis.odom_theta_flip();
+  redLeftAWP();
+}
+
 void redLeftRingRush(){
   chassis.odom_xyt_set(-58.706,46.997,-34.315);
   chassis.pid_odom_set(-32_in,110);
@@ -489,6 +495,12 @@ void redLeftRingRush(){
   chassis.pid_wait();
   chassis.pid_odom_set(46_in,127);
   chassis.pid_wait();
+}
+
+void blueRightRingRush(){
+  chassis.odom_x_flip();
+  chassis.odom_theta_flip();
+  redLeftRingRush();
 }
 
 void leftRed(){

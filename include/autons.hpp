@@ -1,5 +1,6 @@
 #pragma once
 
+#include "autons.hpp"
 void default_constants();
 
 void drive_example();
@@ -21,4 +22,6 @@ void rightBlue();
 void closeBase();
 void skills();
 void redLeftAWP();
+void blueRightAWP();
 void redLeftRingRush();
+void blueRightRingRush();
