@@ -63,9 +63,9 @@ void initialize() {
 
   // Autonomous Selector using LLEMU
   ez::as::auton_selector.autons_add({
+      {"Red Left Ring Rush For State", redLeftRingRush},
       {"Red Left AWP For State", redLeftAWP},
       {"Blue Right AWP For State", blueRightAWP},
-      {"Red Left Ring Rush For State", redLeftRingRush},
       {"Blue Right Ring Rush For State", blueRightRingRush},
       {"Safe Red Right Auton", redRightSafe},
       {"Safe Blue Left Auton", blueLeftSafe},

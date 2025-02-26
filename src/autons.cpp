@@ -464,22 +464,26 @@ void blueRightAWP(){
 }
 
 void redLeftRingRush(){
-  chassis.odom_xyt_set(-58.706,46.997,-34.315);
-  chassis.pid_odom_set(-32_in,110);
+  arm.move(127);
+  chassis.odom_xyt_set(-58.706,46.997,-55);
+  chassis.pid_odom_set(-32_in,70);
   chassis.pid_wait();
+  arm.set_brake_mode(pros::MotorBrake::hold);
+  arm.brake();
   chassis.pid_odom_set(-4_in,40);
   chassis.pid_wait();
   mogo.set_value(1);
   pros::delay(250);
 
-  chassis.pid_turn_set(45, TURN_SPEED);
+  chassis.pid_turn_set(50, TURN_SPEED);
   chassis.pid_wait();
   intake.move(127);
   chassis.pid_odom_set(25_in, DRIVE_SPEED);
   chassis.pid_wait();
+  chassis.pid_wait();
   chassis.pid_turn_set(10_deg, TURN_SPEED);
   chassis.pid_wait();
-  chassis.pid_odom_set(10_in,DRIVE_SPEED);
+  chassis.pid_odom_set(7_in,DRIVE_SPEED);
   chassis.pid_wait();
   pros::delay(500);
   chassis.pid_odom_set(-15_in, DRIVE_SPEED);
@@ -491,10 +495,10 @@ void redLeftRingRush(){
   chassis.pid_wait();
   pros::delay(250);
 
-  chassis.pid_turn_set({-66,66},fwd,TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set(46_in,127);
-  chassis.pid_wait();
+  // chassis.pid_turn_set({-66,66},fwd,TURN_SPEED);
+  // chassis.pid_wait();
+  // chassis.pid_odom_set(46_in,127);
+  // chassis.pid_wait();
 }
 
 void blueRightRingRush(){
