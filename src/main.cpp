@@ -1,6 +1,7 @@
 #include "main.h"
 
 #include "autons.hpp"
+#include "pros/abstract_motor.hpp"
 #include "pros/misc.h"
 #include "subsystems.hpp"
 
@@ -244,6 +245,7 @@ void ez_template_extras() {
 void opcontrol() {
   // This is preference to what you like to drive on
   chassis.drive_brake_set(MOTOR_BRAKE_COAST);
+  arm.set_brake_mode(pros::MotorBrake::coast);
 
   while (true) {
     // Gives you some extras to make EZ-Template ezier
