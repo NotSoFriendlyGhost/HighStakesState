@@ -2,6 +2,7 @@
 #include "EZ-Template/util.hpp"
 #include "main.h"
 #include "pros/abstract_motor.hpp"
+#include "pros/rtos.hpp"
 #include "subsystems.hpp"
 
 /////
@@ -412,9 +413,10 @@ void redLeftAWP(){
   chassis.pid_wait();
   chassis.pid_odom_set(-6_in, DRIVE_SPEED);
   chassis.pid_wait();
-  intake.move(127);
+  pros::Task colorsort(redsort);
+  // intake.move(127);
   pros::delay(750);
-  intake.brake();
+  // intake.brake();
 
   chassis.odom_xyt_set(-58.761,0,90);
   chassis.pid_odom_set(4_in,DRIVE_SPEED);
@@ -430,7 +432,7 @@ void redLeftAWP(){
 
   chassis.pid_turn_set({-24.381,44.471},fwd,TURN_SPEED);
   chassis.pid_wait();
-  intake.move(127);
+  // intake.move(127);
   chassis.pid_odom_set({{-24.381,44.471},fwd,DRIVE_SPEED});
   chassis.pid_wait();
 

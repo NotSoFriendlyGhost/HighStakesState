@@ -23,3 +23,4 @@ inline pros::Motor intake(15);
 inline pros::Motor arm(3);
 
 inline pros::Optical opticalSensor(1);
+inline pros::Optical opticalSensor2(13);
