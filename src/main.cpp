@@ -72,7 +72,8 @@ void initialize() {
       {"Safe Blue Left Auton", blueLeftSafe},
       {"Two Goal Red Right Auton", redRightTwoGoal},
       {"Two Goal Blue Left Auton", blueLeftTwoGoal},
-      {"Color sort test for spitting red rings", redsort},
+      {"Color sort test for intaking red rings", redsort},
+      {"Color sort test for intaking blue rings", bluesort},
       {"Auton skills run", skills},
       {"Measure Offsets\n\nThis will turn the robot a bunch of times and calculate your offsets for your tracking wheels.", measure_offsets},
   });
