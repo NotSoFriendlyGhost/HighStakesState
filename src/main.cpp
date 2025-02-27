@@ -246,6 +246,7 @@ void opcontrol() {
   // This is preference to what you like to drive on
   chassis.drive_brake_set(MOTOR_BRAKE_COAST);
   arm.set_brake_mode(pros::MotorBrake::coast);
+  intake.set_brake_mode(pros::MotorBrake::coast);
 
   while (true) {
     // Gives you some extras to make EZ-Template ezier
