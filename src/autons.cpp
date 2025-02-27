@@ -1,5 +1,6 @@
 #include "EZ-Template/drive/drive.hpp"
 #include "EZ-Template/util.hpp"
+#include "colordetect.hpp"
 #include "main.h"
 #include "pros/abstract_motor.hpp"
 #include "pros/rtos.hpp"
@@ -479,7 +480,7 @@ void redLeftRingRush(){
 
   chassis.pid_turn_set(50, TURN_SPEED);
   chassis.pid_wait();
-  intake.move(127);
+  pros::Task colorsort(redsort);
   chassis.pid_odom_set(25_in, DRIVE_SPEED);
   chassis.pid_wait();
   chassis.pid_wait();
@@ -496,6 +497,14 @@ void redLeftRingRush(){
   chassis.pid_odom_set(12_in, DRIVE_SPEED);
   chassis.pid_wait();
   pros::delay(250);
+
+  chassis.pid_turn_set({-47,0},fwd,TURN_SPEED);
+  chassis.pid_wait();
+  chassis.pid_odom_set({{-47,0},fwd,DRIVE_SPEED});
+  chassis.pid_wait();
+
+  chassis.pid_drive_set(8_in,DRIVE_SPEED);
+  chassis.pid_wait();
 
   // chassis.pid_turn_set({-66,66},fwd,TURN_SPEED);
   // chassis.pid_wait();
@@ -540,11 +549,6 @@ void redRightSafe(){
   chassis.pid_wait();
   intake.move(127);
   chassis.pid_odom_set({{-24.381,-44.471},fwd,DRIVE_SPEED});
-  chassis.pid_wait();
-
-  chassis.pid_turn_set({-66,-66},fwd,TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set(46_in,DRIVE_SPEED);
   chassis.pid_wait();
 }
 
