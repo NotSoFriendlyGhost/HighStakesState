@@ -437,6 +437,8 @@ void redLeftAWP(){
   chassis.pid_wait();
   chassis.pid_odom_set(23_in,DRIVE_SPEED);
   chassis.pid_wait();
+
+  colorsort.remove();
 }
 
 void blueRightAWP(){
@@ -481,6 +483,8 @@ void blueRightAWP(){
   chassis.pid_wait();
   chassis.pid_odom_set(23_in,DRIVE_SPEED);
   chassis.pid_wait();
+
+  colorsort.remove();
 }
 
 void redLeftRingRush(){
@@ -521,6 +525,8 @@ void redLeftRingRush(){
 
   chassis.pid_drive_set(8_in,DRIVE_SPEED);
   chassis.pid_wait();
+
+  colorsort.remove();
 }
 
 void blueRightRingRush(){
@@ -561,6 +567,8 @@ void blueRightRingRush(){
 
   chassis.pid_drive_set(8_in,DRIVE_SPEED);
   chassis.pid_wait();
+
+  colorsort.remove();
 }
 
 void redRightSafe(){
