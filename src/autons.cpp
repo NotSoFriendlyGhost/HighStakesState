@@ -396,14 +396,6 @@ void measure_offsets() {
 // . . .
 
 void redLeftAWP(){
-  // chassis.odom_xyt_set(-53.584, 23.345, 0);
-  // chassis.pid_odom_set({{-53.584,0},rev,DRIVE_SPEED});
-  // chassis.pid_wait();
-  // chassis.pid_turn_set({0,0},fwd,TURN_SPEED);
-  // chassis.pid_wait();
-  // chassis.pid_odom_set({{},rev, DRIVE_SPEED});
-  // chassis.pid_wait();
-  // intake.move(127);
   chassis.odom_xyt_set(0,0,0);
   arm.move(127);
   chassis.pid_odom_set(-23_in, DRIVE_SPEED);
@@ -415,9 +407,7 @@ void redLeftAWP(){
   chassis.pid_odom_set(-6_in, DRIVE_SPEED);
   chassis.pid_wait();
   pros::Task colorsort(redsort);
-  // intake.move(127);
   pros::delay(750);
-  // intake.brake();
 
   chassis.odom_xyt_set(-58.761,0,90);
   chassis.pid_odom_set(4_in,DRIVE_SPEED);
@@ -433,7 +423,6 @@ void redLeftAWP(){
 
   chassis.pid_turn_set({-24.381,44.471},fwd,TURN_SPEED);
   chassis.pid_wait();
-  // intake.move(127);
   chassis.pid_odom_set({{-24.381,44.471},fwd,DRIVE_SPEED});
   chassis.pid_wait();
 
@@ -448,16 +437,6 @@ void redLeftAWP(){
   chassis.pid_wait();
   chassis.pid_odom_set(23_in,DRIVE_SPEED);
   chassis.pid_wait();
-  // pros::delay(500);
-  // chassis.pid_odom_set(-2_in,DRIVE_SPEED);
-  // chassis.pid_wait();
-  // chassis.pid_turn_set(175_deg,TURN_SPEED);
-  // chassis.pid_wait();
-  // chassis.pid_odom_set(14_in,DRIVE_SPEED);
-  // chassis.pid_wait();
-  // chassis.pid_turn_set(150_deg,TURN_SPEED);
-  // chassis.pid_wait();
-
 }
 
 void blueRightAWP(){
@@ -505,11 +484,6 @@ void redLeftRingRush(){
 
   chassis.pid_drive_set(8_in,DRIVE_SPEED);
   chassis.pid_wait();
-
-  // chassis.pid_turn_set({-66,66},fwd,TURN_SPEED);
-  // chassis.pid_wait();
-  // chassis.pid_odom_set(46_in,127);
-  // chassis.pid_wait();
 }
 
 void blueRightRingRush(){
@@ -561,104 +535,6 @@ void blueLeftSafe(){
   chassis.odom_x_flip();
   chassis.odom_theta_flip();
   redRightSafe();
-}
-
-void redRightTwoGoal(){
-  chassis.odom_xyt_set(0,0,180);
-  arm.move(127);
-  chassis.pid_odom_set(-23_in, DRIVE_SPEED);
-  chassis.pid_wait();
-  arm.set_brake_mode(pros::MotorBrake::hold);
-  arm.brake();
-  chassis.pid_turn_set(90,TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set(-6_in, DRIVE_SPEED);
-  chassis.pid_wait();
-  intake.move(127);
-  pros::delay(750);
-  intake.brake();
-
-  chassis.odom_xyt_set(-58.761,0,90);
-  chassis.pid_odom_set(4_in,DRIVE_SPEED);
-  chassis.pid_wait();
-  chassis.pid_turn_set({-28.937,-21.067},rev,TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set({{-28.937,-21.067},rev,DRIVE_SPEED});
-  chassis.pid_wait();
-  chassis.pid_odom_set(-4_in,40);
-  chassis.pid_wait();
-  mogo.set_value(1);
-  pros::delay(250);
-
-  chassis.pid_turn_set({-24.381,-44.471},fwd,TURN_SPEED);
-  chassis.pid_wait();
-  intake.move(127);
-  chassis.pid_odom_set({{-24.381,-44.471},fwd,DRIVE_SPEED});
-  chassis.pid_wait();
-  mogo.set_value(0);
-  pros::delay(250);
-
-  chassis.pid_turn_set(225_deg,TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set(-12_in,DRIVE_SPEED);
-  chassis.pid_wait();
-  chassis.pid_turn_set(315_deg,TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set(-12_in,40);
-  chassis.pid_wait();
-  mogo.set_value(1);
-  pros::delay(250);
-
-  chassis.pid_turn_set({-66,-66},fwd,TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set(64_in,127);
-  chassis.pid_wait();
-}
-
-void blueLeftTwoGoal(){
-  chassis.odom_x_flip();
-  chassis.odom_theta_flip();
-  redRightTwoGoal();
-}
-
-void leftRed(){
-  chassis.odom_xyt_set(-58.767,47.393,-90);
-  chassis.pid_turn_set({-28.252,25.755}, rev, TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set({{-28.252,25.755}, rev, 30});
-  chassis.pid_wait();
-  mogo.set_value(1);
-  // pros::delay(250);
-  // opticalSensor.set_led_pwm(50);
-  // intake.move(127);
-  // pros::Task task{[=]{
-  //   double GV = opticalSensor.get_hue();
-  //   if(GV<240&&GV>200){
-  //     if(pros::)
-
-  //   }
-
-  // }};
-  chassis.pid_turn_set({-8.278,39.626}, fwd, TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set({{-8.278,39.626}, fwd, 63});
-  chassis.pid_wait();
-
-  chassis.pid_turn_set({-23.536,47.116}, fwd, TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set({{-23.536,47.116}, fwd, 63});
-  chassis.pid_wait();
-
-  chassis.pid_turn_set({-24.091,5.781}, fwd, TURN_SPEED);
-  chassis.pid_wait();
-  chassis.pid_odom_set({{-24.091,5.781}, fwd, 63});
-  chassis.pid_wait();
-}
-
-void rightBlue(){
-  chassis.odom_x_flip();
-  chassis.odom_theta_flip();
-  leftRed();
 }
 
 // close side skills

@@ -64,14 +64,12 @@ void initialize() {
 
   // Autonomous Selector using LLEMU
   ez::as::auton_selector.autons_add({
-      {"Red Left Ring Rush For State", redLeftRingRush},
       {"Red Left AWP For State", redLeftAWP},
       {"Blue Right AWP For State", blueRightAWP},
+      {"Red Left Ring Rush For State", redLeftRingRush},
       {"Blue Right Ring Rush For State", blueRightRingRush},
-      {"Safe Red Right Auton", redRightSafe},
-      {"Safe Blue Left Auton", blueLeftSafe},
-      {"Two Goal Red Right Auton", redRightTwoGoal},
-      {"Two Goal Blue Left Auton", blueLeftTwoGoal},
+      {"Red Right Auton", redRightSafe},
+      {"Blue Left Auton", blueLeftSafe},
       {"Color sort test for intaking red rings", redsort},
       {"Color sort test for intaking blue rings", bluesort},
       {"Auton skills run", skills},
