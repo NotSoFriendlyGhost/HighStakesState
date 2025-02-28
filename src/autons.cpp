@@ -469,7 +469,7 @@ void blueRightAWP(){
 void redLeftRingRush(){
   arm.move(127);
   chassis.odom_xyt_set(-58.706,46.997,-55);
-  chassis.pid_odom_set(-32_in,70);
+  chassis.pid_odom_set(-32_in,63);
   chassis.pid_wait();
   arm.set_brake_mode(pros::MotorBrake::hold);
   arm.brake();
@@ -549,6 +549,11 @@ void redRightSafe(){
   chassis.pid_wait();
   intake.move(127);
   chassis.pid_odom_set({{-24.381,-44.471},fwd,DRIVE_SPEED});
+  chassis.pid_wait();
+
+  chassis.pid_turn_set(45,TURN_SPEED);
+  chassis.pid_wait();
+  chassis.pid_odom_set(23_in,DRIVE_SPEED);
   chassis.pid_wait();
 }
 

@@ -6,7 +6,6 @@
 #include "pros/rtos.hpp"
 
 void bluesort(){
-    mogo.set_value(1);
     opticalSensor.set_led_pwm(50);
     opticalSensor2.set_led_pwm(50);
     while(true){
@@ -20,7 +19,6 @@ void bluesort(){
 }
 
 void redsort(){
-    mogo.set_value(1);
     opticalSensor.set_led_pwm(50);
     opticalSensor2.set_led_pwm(50);
     while(true){
