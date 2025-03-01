@@ -625,7 +625,7 @@ void blueLeftSafe(){
   pros::delay(750);
   intake.brake();
 
-  chassis.odom_xyt_set(-58.761,0,-90);
+  chassis.odom_xyt_set(58.761,0,-90);
   chassis.pid_odom_set(4_in,DRIVE_SPEED);
   chassis.pid_wait();
   chassis.pid_turn_set({28.937,-21.067},rev,TURN_SPEED);
