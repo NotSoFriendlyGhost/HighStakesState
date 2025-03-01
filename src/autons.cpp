@@ -653,7 +653,7 @@ void blueLeftSafe(){
 void closeBase() {
   chassis.pid_turn_set({-47.07, 17.854}, rev, TURN_SPEED);
   chassis.pid_wait();
-  chassis.pid_odom_set({{-47.07, 17.854}, rev, 30});
+  chassis.pid_odom_set({{-47.07, 17.854}, rev, DRIVE_SPEED});
   chassis.pid_wait();
   chassis.pid_odom_set(-4_in,40);
   mogo.set_value(1);
@@ -727,7 +727,9 @@ void skills() {
   chassis.pid_wait();
   chassis.pid_turn_set({61.592,63.501}, fwd, TURN_SPEED);
   chassis.pid_wait();
-  chassis.pid_odom_set({{61.592,63.501}, fwd, 111});
+  // chassis.pid_odom_set({{61.592,63.501}, fwd, 111});
+  // chassis.pid_wait();
+  chassis.pid_odom_set(44_in,110);
   chassis.pid_wait();
 
   chassis.pid_turn_set({38.788,16.304}, rev, TURN_SPEED);
@@ -742,7 +744,9 @@ void skills() {
 
   chassis.pid_turn_set({61.592,-63.501}, fwd, TURN_SPEED);
   chassis.pid_wait();
-  chassis.pid_odom_set({{61.592,-63.501}, fwd, 111});
+  // chassis.pid_odom_set({{61.592,-63.501}, fwd, 111});
+  // chassis.pid_wait();
+  chassis.pid_odom_set(44_in,110);
   chassis.pid_wait();
 
   chassis.pid_turn_set({29.053,-28.639}, rev, TURN_SPEED);
