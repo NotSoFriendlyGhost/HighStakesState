@@ -64,16 +64,16 @@ void initialize() {
 
   // Autonomous Selector using LLEMU
   ez::as::auton_selector.autons_add({
-      {"Red Left AWP For State", redLeftAWP},
-      {"Blue Right AWP For State", blueRightAWP},
-      {"Red Left Ring Rush For State", redLeftRingRush},
+      // {"Red Left AWP For State", redLeftAWP},
+      // {"Blue Right AWP For State", blueRightAWP},
+      // {"Red Left Ring Rush For State", redLeftRingRush},
       {"Blue Right Ring Rush For State", blueRightRingRush},
-      {"Red Right Auton", redRightSafe},
-      {"Blue Left Auton", blueLeftSafe},
-      {"Color sort test for intaking red rings", redsort},
-      {"Color sort test for intaking blue rings", bluesort},
-      {"Auton skills run", skills},
-      {"Measure Offsets\n\nThis will turn the robot a bunch of times and calculate your offsets for your tracking wheels.", measure_offsets},
+      // {"Red Right Auton", redRightSafe},
+      // {"Blue Left Auton", blueLeftSafe},
+      // {"Color sort test for intaking red rings", redsort},
+      // {"Color sort test for intaking blue rings", bluesort},
+      // {"Auton skills run", skills},
+      // {"Measure Offsets\n\nThis will turn the robot a bunch of times and calculate your offsets for your tracking wheels.", measure_offsets},
   });
 
   // Initialize chassis and auton selector
