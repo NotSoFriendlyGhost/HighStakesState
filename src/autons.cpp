@@ -688,7 +688,7 @@ void closeBase() {
   chassis.pid_wait();
   mogo.set_value(0);
   pros::delay(250);
-  chassis.pid_odom_set({{-61.592, 63.501}, rev, DRIVE_SPEED});
+  chassis.pid_odom_set(-15_in, DRIVE_SPEED);
   chassis.pid_wait();
 }
 
