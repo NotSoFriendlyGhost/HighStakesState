@@ -19,7 +19,7 @@ This codebase was developed to deliver **precision**, **speed**, and **reliabili
 - Built on LemLib’s motion library for **odometry**, **pure‑pursuit path following**, and **field‑aware navigation**.
 
 ### 📍 Odometry & Navigation (via LemLib)  
-- Utilizes LemLib’s odometry support (tracking wheels or IMU) to maintain accurate robot pose on the field. :contentReference[oaicite:2]{index=2}  
+- Utilizes LemLib’s odometry support (tracking wheels or IMU) to maintain accurate robot pose on the field.
 - Enables motion algorithms like path following and swing/turn to face commands, delivering consistent autonomous paths.  
 - Tuned for the High Stakes field layout to reliably hit scoring zones and end in climb position.
 
@@ -39,7 +39,7 @@ This codebase was developed to deliver **precision**, **speed**, and **reliabili
 |------------------|-------------------------------------------------------------------------------------|
 | **Language**     | C / C++                                                                            |
 | **Framework**    | [PROS](https://pros.cs.purdue.edu/)                                               |
-| **Library**      | [LemLib](https://github.com/LemLib/LemLib) — for odometry, path following, motion algorithms :contentReference[oaicite:3]{index=3} |
+| **Library**      | [LemLib](https://github.com/LemLib/LemLib) — for odometry, path following, motion algorithms |
 | **Hardware**     | VEX V5 Electronics                                                                  |
 
 ---
